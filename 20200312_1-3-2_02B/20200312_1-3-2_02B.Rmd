@@ -2,7 +2,7 @@
 title: "Chapter 1 HTML/CSS 1"
 output: html_document
 ---
-
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 <br><br>
 <h2><b>1.1</b> 教材</h2>
 <br><br>
