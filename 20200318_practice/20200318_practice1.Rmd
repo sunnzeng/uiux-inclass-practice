@@ -1,0 +1,12 @@
+---
+title: "20200318"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+    includes:
+      in_header: "external/inheader.html"
+      after_body: "external/afterbody.html"
+---
