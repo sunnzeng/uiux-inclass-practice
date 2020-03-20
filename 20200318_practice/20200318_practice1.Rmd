@@ -10,3 +10,38 @@ output:
       in_header: "external/inheader.html"
       after_body: "external/afterbody.html"
 ---
+
+<img src="https://www.ibt.org.uk/wp-content/uploads/2018/02/the-economist600.jpg"/>
+
+<img src="img/img1.jpg" width="350px"/>
+
+<table>
+  <tr>
+  <th>Company</th>
+  <th>Contact</th>
+  <th>Country</th>
+  </tr>
+  <tr>
+  <td>Alfreds Futterkiste</td>
+  <td>Maria Anders</td>
+  <td>Germany</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+</table>
+
+```{r, echo=FALSE}
+htmltools::includeHTML("subpage/content.html")
+```
+
