@@ -7,3 +7,8 @@ output:
     mathjax: null
     self_contained: false
 ---
+
+```{r, echo=FALSE}
+htmltools::includeHTML("content.html")
+```
+
