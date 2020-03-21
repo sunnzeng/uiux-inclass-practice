@@ -6,6 +6,9 @@ output:
     highlight: null
     mathjax: null
     self_contained: false
+    includes:
+      in_header: "external/header.html"
+      after_body: "external/afterbody.html"
 ---
 
 ```{r, echo=FALSE}
