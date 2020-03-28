@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <style>
+      .fatherA{
+        border:1px solid black;
+        position:static;
+        width:300px;
+        height:100px;
+      }
+      .childA{
+        border:1px solid red;
+        position: static;
+        margin:5px;
+      }
+      .fatherB{
+        border:1px solid black;
+        position:relative;
+        width:300px;
+        height:100px;
+      }
+      .childB{
+        border:1px solid red;
+        position: relative;
+        top:50px;
+        left:100px;
+      }
+      .fatherC{
+        border:1px solid black;
+        position:absolute;
+        width:300px;
+        height:100px;
+        top:750px;
+        right:100px;
+      }
+      .childC{
+        position: absolute;
+        border: 1px solid red;
+        width:300px;
+        top:75px;
+        right:20px;
+      }
+      .fatherD{
+        position:fixed;
+        border: 1px dashed black;
+        width:300px;
+        height:100px;
+        background-color: grey;
+        bottom:0;
+        left:0;
+      }
+      .childD{
+        border:1px solid red;
+        position:absolute;
+        width:30px;
+        height:30px;
+        top:0;
+        right:0;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="fatherA">Static
+      <div class="childA">A1</div>
+      <div class="childA">A2</div>
+    </div><br><br>
+    <div class="fatherB">Relative
+      <div class="childB">B</div>
+    </div><br><br>    
+    <div class="fatherC">Absolute
+      <div class="childC">C</div>
+    </div><br><br>      
+    <div class="fatherD">Fixed
+      <div class="childD">D</div>
+    </div>    
+    
+    
+  </body>
+  
+</html>  
