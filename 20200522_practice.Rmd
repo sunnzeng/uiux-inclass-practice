@@ -12,6 +12,7 @@ const objExample={
 ```
 
 ```{r}
+library(dplyr)
 exDataPost80s <- readr::read_csv("https://www.dropbox.com/s/rc6t40gsxduysz6/exDataPost80s.csv?dl=1")
 
 exDataPost80s %>%
@@ -63,5 +64,9 @@ request2.onload = function() {
 
 //送出請求
 request2.send();
+```
+
+```{r}
+show(packages)
 ```
 

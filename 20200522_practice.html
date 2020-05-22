@@ -377,6 +377,66 @@ const objExample={
     name:'Lin',
     changeName: function(newName){this.name=newName}}
 </script>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>exDataPost80s &lt;- readr::read_csv(&quot;https://www.dropbox.com/s/rc6t40gsxduysz6/exDataPost80s.csv?dl=1&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   期間 = col_date(format = &quot;&quot;),
+##   幣別 = col_character(),
+##   匯率 = col_double(),
+##   貶值率 = col_double(),
+##   年份 = col_double(),
+##   時期 = col_character()
+## )</code></pre>
+<pre class="r"><code>exDataPost80s %&gt;%
+  group_by(幣別) %&gt;%
+  summarise(
+    平均匯率=mean(匯率, na.rm=T)
+  ) -&gt; averageEX</code></pre>
+<pre class="r"><code>writeLines(
+  jsonlite::toJSON(averageEX),
+  con=&quot;myJsonData.json&quot;
+)</code></pre>
+<pre class="js"><code>var requestURL = &#39;myJsonData.json&#39;
+
+//設定準備使用的GET instance
+const requestMyJson = new XMLHttpRequest();
+requestMyJson.open(&#39;GET&#39;, requestURL);
+requestMyJson.responseType = &#39;json&#39;;
+
+var exchangeRate
+//Asynchronous communication
+requestMyJson.onload = function() {
+  exchangeRate = requestMyJson.response;
+}
+
+//送出請求
+requestMyJson.send();</code></pre>
+<script type="text/javascript">
+var requestURL = 'myJsonData.json'
+
+//設定準備使用的GET instance
+const requestMyJson = new XMLHttpRequest();
+requestMyJson.open('GET', requestURL);
+requestMyJson.responseType = 'json';
+
+var exchangeRate
+//Asynchronous communication
+requestMyJson.onload = function() {
+  exchangeRate = requestMyJson.response;
+}
+
+//送出請求
+requestMyJson.send();
+</script>
 <pre class="js"><code>var requestURL = &#39;https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json&#39;;  //如前面已出現var requestURL, var可不寫
 
 //設定準備使用的GET instance
