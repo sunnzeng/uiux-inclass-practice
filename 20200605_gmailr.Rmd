@@ -1,0 +1,25 @@
+---
+title: "Untitled"
+author: "Sunny"
+date: "2020/6/5"
+output: html_document
+---
+
+```{r}
+library("gmailr")
+gm_auth_configure()
+
+```
+
+```{r}
+test_email <-
+  gm_mime() %>%
+  gm_to("sunny607520@gmail.com") %>%
+  gm_from("sunny607520@gmail.com") %>%
+  gm_subject("嗨") %>%
+  gm_text_body("Can you hear me now?")
+
+# Verify it looks correct
+gm_create_draft(test_email)
+```
+
